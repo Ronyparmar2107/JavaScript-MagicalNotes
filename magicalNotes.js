@@ -7,11 +7,15 @@ addBtn.addEventListener("click", function() { // saving the text in object
     let addTxt = document.getElementById("addTxt");
     let addTitle = document.getElementById("addTitle");
     let notes = localStorage.getItem("notes");
-    if (notes == null) {
-        notesObj = [];
-    } else {
+   if(addTxt.value.length==0 && addTitle.value.length ==0)
+   {alert('Enter some Text')}
+   else {
+       if (notes == null) {
+            notesObj = [];
+        } 
+        else {
         notesObj = JSON.parse(notes);
-    }
+        }
     let myObj = {
         Title: addTitle.value,
         text: addTxt.value
@@ -21,7 +25,7 @@ addBtn.addEventListener("click", function() { // saving the text in object
     addTxt.value = "";
     addTitle.value = "";
     displayNotes(); //displaying the notes that are being saved  
-
+   }
 });
 
 function displayNotes() {
@@ -73,24 +77,26 @@ function Delete(index) {
 
 }
 
-let searchTxt = document.getElementById("searchTxt");
-searchTxt.addEventListener("input", function() {
-    console.log("heya")
-    let noteCards = document.getElementsByClassName("noteCards")
-    Array.from(noteCards).forEach(function(element) {
+// let mode = document.getElementById("mode")
+// mode.addEventListener("click",function(){
+//     console.log('hiii')
+//     let page = document.getElementById('page')
+//     let pageClass = page.getAttribute('class')
+//     const card = document.getElementById('card')
+//     let cardClass = card.getAttribute('class')
+//     let modeName = document.getElementById('modeName')
 
-        let inputVal = searchTxt.value;
-        let cardTxt = document.getElementsByTagName("p")[0].innerHTML;
-        // let cardTitle = document.getElementsByTagName("h5")[0].innerHTML;
+//     if (modeName.innerHTML==='Enable Dark Mode'){
+//         modeName.innerHTML='Enable Light Mode'
+//         pageClass.value= 'bg-dark text-white'
+//     } 
 
-        if (cardTxt.value.includes(inputVal)) {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
+//     else if(modeName.innerHTML==='Enable light Mode'){
+//         modeName.innerHTML='Enable Dark Mode' 
+//     }
 
+    
 
-    })
+    
 
-
-})
+// })
