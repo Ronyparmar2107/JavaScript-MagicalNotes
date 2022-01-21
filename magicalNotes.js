@@ -7,8 +7,8 @@ addBtn.addEventListener("click", function() { // saving the text in object
     let addTxt = document.getElementById("addTxt");
     let addTitle = document.getElementById("addTitle");
     let notes = localStorage.getItem("notes");
-   if(addTxt.value.length==0 && addTitle.value.length ==0)
-   {alert('Enter some Text')}
+   if(addTxt.value.length==0 || addTitle.value.length ==0)
+   {alert('Enter a heading and a note ')}
    else {
        if (notes == null) {
             notesObj = [];
@@ -42,8 +42,8 @@ function displayNotes() {
         txt += `
         <div class=""noteCards my-2 mx-2 card" style="width: 18rem;">
         <div class=Cards">
-            <h5 class="card-title">${element.Title}</h5>
-            <p class="card-text">${element.text}</p>
+            <h5 style="font-size: 35px;font-weight: bold; "class="card-title">${element.Title.toUpperCase()}</h5>
+            <p style="font-size: 23px;" class="card-text">${element.text}</p>
             <button class="btn btn-primary" id="${index}"onclick ="Delete(this.id)" >Delete</button>
         </div>
     </div>`;
@@ -79,24 +79,16 @@ function Delete(index) {
 
 // let mode = document.getElementById("mode")
 // mode.addEventListener("click",function(){
-//     console.log('hiii')
-//     let page = document.getElementById('page')
-//     let pageClass = page.getAttribute('class')
-//     const card = document.getElementById('card')
-//     let cardClass = card.getAttribute('class')
-//     let modeName = document.getElementById('modeName')
-
-//     if (modeName.innerHTML==='Enable Dark Mode'){
-//         modeName.innerHTML='Enable Light Mode'
-//         pageClass.value= 'bg-dark text-white'
-//     } 
-
-//     else if(modeName.innerHTML==='Enable light Mode'){
-//         modeName.innerHTML='Enable Dark Mode' 
-//     }
-
     
-
+    // if (modeName.innerHTML==='Enable Dark Mode'){
+    //     modeName.innerHTML='Enable Light Mode'
+    //     console.log('This is Dark Mode')
+    // } 
     
-
+    // else if(modeName.innerHTML==='Enable Light Mode'){
+    //         modeName.innerHTML='Enable Dark Mode'
+    //         page.classList.toggle("page")
+    //         card.classList.toggle("card")
+    //         console.log('This is Light Mode')
+    // }
 // })

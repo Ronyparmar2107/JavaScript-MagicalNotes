@@ -1,0 +1,20 @@
+[data-theme="dark"] {
+    background-color: rgb(58, 57, 57) !important;
+    color: aliceblue;
+}
+[data-theme="dark"] nav{
+    background-color: rgb(28 28 28) !important;
+    color: aliceblue;
+}
+[data-theme="dark"] .card{
+    background-color: rgb(58, 57, 57) !important;
+    color: aliceblue;
+}
+
+#logo{
+    font-size: 2rem; 
+    font-weight: bold;
+    font-family: 'Lobster Two', cursive;
+}
+
+

@@ -7,43 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magical Notes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="darktheme.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="bg-dark text-white" id='page' style=" min-height: 100vh;padding-bottom:2rem ;">
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="#">Magic Notes</a>
-        <!-- <div id='mode' class="custom-control custom-switch">
-            <input  type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label id='modeName' class="custom-control-label" for="customSwitch1">Enable Dark Mode</label>
-          </div> -->
-    </nav>
-    <div  class="container my-3">
-        <h1>Welcome To Magic Notes</h1>
-        <div id="card" class="card bg-dark text-white">
-            <div class="card-body">
-                <div class="form-group">
-                    <h4>Add Title</h4>
-                    <input type="text" class="form-control" id="addTitle" placeholder="Add Title">
-                    <h5>Add Notes</h5>
-                    <textarea class="form-control" id="addTxt" rows="3" placeholder="Add Note here"></textarea>
+    <div class="page" style=" min-height: 100vh;padding-bottom:2rem ;">
+        <nav class="navbar navbar-light" style="background-color: rgb(200, 222, 241);" >
+            <nav id="logo" class="navbar" href="#">Magic Notes</nav>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                <label class="custom-control-label" for="darkSwitch">Dark Switch</label>
+              </div>
+        </nav>
+        <div style="font-family: 'Dongle', sans-serif; font-size: 30px;" class="container my-3">
+            <h1 style="font-size: 50px;font-weight: bolder;">Welcome To Magic Notes</h1>
+            <div class="card ">
+                <div class="card-body">
+                    <div class="form-group">
+                        <h4 style="font-size: 35px;font-weight: bold;">Add Title</h4>
+                        <input style="font-size: 27px;" type="text" class="form-control" id="addTitle" placeholder="Add Title">
+                        <h5 style="font-size: 30px; font-weight: bold;">Add Notes</h5>
+                        <textarea style="font-size: 27px; " class="form-control" id="addTxt" rows="2" placeholder="Add Note here"></textarea>
+                    </div>
+                    <button style="font-size: 23px;" class="btn btn-primary" id="addBtn">Add Note</button>
                 </div>
-                <button class="btn btn-primary" id="addBtn">Add Note</button>
+            </div>
+            <hr>
+            <h1 style="font-size: 50px;font-weight: bolder;">Your Notes</h1>
+            <hr>
+            <div id="noteHead" class="row container-fluid">
+            </div>
+            <div id="notes" class="row container-fluid">
             </div>
         </div>
-        <hr>
-        <h1>Your Notes</h1>
-        <hr>
-        <div id="noteHead" class="row container-fluid">
-        </div>
-        <div id="notes" class="row container-fluid">
-        </div>
     </div>
-</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="magicalNotes.js"></script>
+    <script src="./dark-mode-switch.min.js"></script>
 </body>
 
 </html>
